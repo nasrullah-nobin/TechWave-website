@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* shared style  */
+.description {
+    font-size: 1rem;
+    line-height: 1.62rem;
+    color: #627382;
+}
+.section-title {
+    font-size: 3rem;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 7.5rem;
+    text-align: center;
+}
