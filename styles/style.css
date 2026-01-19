@@ -98,8 +98,8 @@ nav {
 }
 #tooltip {
   position: absolute;
-  top: 9.7%;
-  left: 52.2%;
+  bottom: 598px;
+  left: 802px;
   color: black;
   background-color: var(--light-green);
   font-weight: 800;
@@ -152,8 +152,50 @@ nav {
   gap: 80px;
 }
 .impact-title {
- color: var(--light-green);
- margin-bottom: 16px;
+  color: var(--light-green);
+  margin-bottom: 16px;
+}
+/* Why choose TechWave */
+.choose-techwave {
+  background-color: #230e3d;
+}
+.techWave-title {
+  margin-bottom: 2.5rem;
+}
+.techWave-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-template-areas:
+    "p m m"
+    "p l l"
+    "s s r";
+}
+.techWave-card {
+  text-align: left;
+  background-color: rgba(53, 17, 101, 0.4);
+  border-radius: 40px;
+  padding: 40px;
+}
+.techWave-card-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 16px 0;
+}
+.Premium {
+  grid-area: p;
+}
+.Mobile {
+  grid-area: m;
+}
+.location {
+  grid-area: l;
+}
+.speed {
+  grid-area: s;
+}
+.resource {
+  grid-area: r;
 }
 /* responsive for small device */
 @media screen and (max-width: 576px) {
@@ -178,10 +220,22 @@ nav {
     width: 80px;
   }
   #tooltip {
-    top: 2.7%;
+    bottom: 91.7%;
     left: 59%;
   }
   .our-impact-box {
     flex-wrap: wrap;
+  }
+  .techWave-box {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "p p p"
+      "m m m"
+      "l l l"
+      "s s s"
+      "r r r";
+  }
+  .section-title {
+    font-size: 2rem;
   }
 }
