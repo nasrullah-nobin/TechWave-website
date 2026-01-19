@@ -224,6 +224,34 @@ nav {
   font-weight: 700;
   margin-bottom: 12px;
 }
+.video {
+  height: 214px;
+}
+/* Meet the Host related styles */
+.host-title {
+  margin-bottom: 40px;
+}
+.Author-Bio {
+  text-align: left;
+  background-color: rgba(53, 17, 101, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 40px;
+}
+.author-name {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.author-social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
 /* responsive for small device */
 @media screen and (max-width: 576px) {
   nav {
@@ -265,7 +293,14 @@ nav {
   .section-title {
     font-size: 2rem;
   }
-  .Episodes-box {
+  .Episodes-box,
+  .Author-Bio {
     flex-direction: column;
+  }
+  .Author-Bio {
+    text-align: center;
+  }
+  .author-social {
+    justify-content: center;
   }
 }
