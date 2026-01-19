@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechWave-website</title>
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,31 +26,37 @@
     <header>
       <nav>
         <h2 class="nav-title">Tech<span class="linear">Wave</span></h2>
-        <img class="hamburger-menu" src="assets/hamburger-menu.png" alt="">
+        <img class="hamburger-menu" src="assets/hamburger-menu.png" alt="" />
         <ul class="nav-menu">
           <li><a class="nav-link" href="#">About</a></li>
           <li><a class="nav-link" href="#">Episodes</a></li>
           <li><a class="nav-link" href="#">Host</a></li>
         </ul>
-        <button class="nav-btn btn">Subscribe</button>
+        <button class="nav-btn btn">
+          Subscribe <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
       </nav>
       <!-- banner section -->
       <section class="banner-section">
-        <img class="banner-image" src="assets/microphone.png" alt="microphone" />
+        <img
+          class="banner-image"
+          src="assets/microphone.png"
+          alt="microphone"
+        />
         <h2 class="banner-title">TechWave</h2>
         <p class="banner-description description">
-          Your daily dose of tech insights, productivity hacks,<br> and personal
-          growth
+          Your daily dose of tech insights, productivity hacks,<br />
+          and personal growth
         </p>
         <p id="tooltip">NEW</p>
         <div class="header-btn">
           <div class="spotify">
-            <div><img src="assets/spotify.png" alt=""></div>
+            <div><img src="assets/spotify.png" alt="" /></div>
             <button class="banner-btn">Listen on Spotify</button>
           </div>
           <div class="message">
-            <img src="assets/message.png" alt="">
-            <button class="banner-btn">Subscribe</button>
+            <img src="assets/message.png" alt="" />
+            <button class="banner-btn green">Subscribe</button>
           </div>
         </div>
       </section>
@@ -50,76 +64,106 @@
     <main>
       <!-- about podcast  -->
       <section class="About-podcast container">
-        <h2 class="about-heading section-title">About The Podcast</h2>
-        <p class="about-description description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur a quod animi. Cum, porro. Maiores corrupti eaque omnis. Cupiditate, eum!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ea.</p>
-        <hr>
-        <div class="">
-          <div class="">
-            <h2>1500k+</h2>
-            <p>MONTHLY LISTENERS</p>
+        <h2 class="about-heading section-title">About the Podcast</h2>
+        <p class="about-description description">
+          TechWave is your go-to podcast for staying ahead in the fast-paced
+          world of technology. We break down complex topics into digestible
+          insights, explore productivity strategies that actually work, and
+          share stories of personal growth from industry leaders.
+        </p>
+        <br>
+        <p class="description">
+          Join thousands of young professionals and tech enthusiasts who start
+          their day with TechWave.
+        </p>
+        <br>
+        <br>
+        <br>
+        <hr/>
+        <div class="our-impact-box">
+          <div class="our-impact">
+            <h2 class="impact-title section-title">1500k+</h2>
+            <p class="impact-description description">MONTHLY LISTENERS</p>
           </div>
-          <div class="">
-            <h2>1500k+</h2>
-            <p>MONTHLY LISTENERS</p>
+          <div class="our-impact">
+            <h2 class="impact-title section-title">200+</h2>
+            <p class="impact-description description">Episodes Published</p>
           </div>
-          <div class="">
-            <h2>1500k+</h2>
-            <p>MONTHLY LISTENERS</p>
+          <div class="our-impact">
+            <h2 class="impact-title section-title">4.9 ★</h2>
+            <p class="impact-description description">Average Rating</p>
           </div>
-          <div class="">
-            <h2>1500k+</h2>
-            <p>MONTHLY LISTENERS</p>
+          <div class="our-impact">
+            <h2 class="impact-title section-title">50+</h2>
+            <p class="impact-description description">Industry Experts</p>
           </div>
         </div>
       </section>
       <!-- Why choose TechWave -->
-       <section class="choose-techwave container">
+      <section style="display: none;" class="choose-techwave container">
         <h2 class="techWave-title section-title">Why choose techWave</h2>
         <article class="techWave-box">
           <div class="techWave-card">
-            <img src="assets/headphone.png" alt="headphone">
+            <img src="assets/headphone.png" alt="headphone" />
             <h3 class="techWave-card-heading">Premium Audio Quality</h3>
-            <p class="techWave-card-description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora aliquid non voluptas!</p>
+            <p class="techWave-card-description description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              tempora aliquid non voluptas!
+            </p>
           </div>
           <div class="techWave-card">
-            <img src="assets/device.png" alt="headphone">
+            <img src="assets/device.png" alt="headphone" />
             <h3 class="techWave-card-heading">Premium Audio Quality</h3>
-            <p class="techWave-card-description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora aliquid non voluptas!</p>
+            <p class="techWave-card-description description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              tempora aliquid non voluptas!
+            </p>
           </div>
           <div class="techWave-card">
-            <img src="assets/location.png" alt="headphone">
+            <img src="assets/location.png" alt="headphone" />
             <h3 class="techWave-card-heading">Premium Audio Quality</h3>
-            <p class="techWave-card-description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora aliquid non voluptas!</p>
+            <p class="techWave-card-description description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              tempora aliquid non voluptas!
+            </p>
           </div>
           <div class="techWave-card">
-            <img src="assets/.png" alt="headphone">
+            <img src="assets/.png" alt="headphone" />
             <h3 class="techWave-card-heading">Premium Audio Quality</h3>
-            <p class="techWave-card-description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora aliquid non voluptas!</p>
+            <p class="techWave-card-description description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              tempora aliquid non voluptas!
+            </p>
           </div>
           <div class="techWave-card">
-            <img src="assets/resource.png" alt="headphone">
+            <img src="assets/resource.png" alt="headphone" />
             <h3 class="techWave-card-heading">Premium Audio Quality</h3>
-            <p class="techWave-card-description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora aliquid non voluptas!</p>
+            <p class="techWave-card-description description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              tempora aliquid non voluptas!
+            </p>
           </div>
         </article>
-       </section>
-       <!-- Featured Episodes -->
-        <section class="featured-episodes container">
-          <h2 class="Episodes-title section-title">Featured Episodes</h2>
-          <article class="Episodes-box">
-            <div class="Episodes-videos">
-              <video src=""></video>
-              <img src="assets/youtube-podcast.png" alt="">
-              <h3 class="video-title">The Featured Of AI in Everyday Life</h3>
-              <p class="video-description description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, accusamus!</p>
-             <div class="video-duration">
-               <div class="clock"><img src="assets/clock.png" alt=""></div>
+      </section>
+      <!-- Featured Episodes -->
+      <section style="display: none;" class="featured-episodes container">
+        <h2 class="Episodes-title section-title">Featured Episodes</h2>
+        <article class="Episodes-box">
+          <div class="Episodes-videos">
+            <video src=""></video>
+            <img src="assets/youtube-podcast.png" alt="" />
+            <h3 class="video-title">The Featured Of AI in Everyday Life</h3>
+            <p class="video-description description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
+              accusamus!
+            </p>
+            <div class="video-duration">
+              <div class="clock"><img src="assets/clock.png" alt="" /></div>
               <span>53 min</span>
-             </div>
             </div>
-          </article>
-        </section>
+          </div>
+        </article>
+      </section>
     </main>
   </body>
 </html>
