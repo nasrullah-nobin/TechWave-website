@@ -19,6 +19,10 @@ body {
   --text-gray: #627382;
   --light-green: #00ff88;
 }
+::selection {
+  background-color: rgba(251, 9, 180, 1);
+  color: rgba(247, 233, 63, 1);
+}
 
 /* shared style  */
 .description {
@@ -43,7 +47,7 @@ body {
   color: var(--primary-color);
   font-size: 1rem;
   font-weight: 600;
-  border: none;
+  border: 1px solid transparent;
 }
 
 /* nav related styles  */
@@ -57,8 +61,16 @@ nav {
   padding-top: 1.87rem;
 }
 .nav-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  transition: 0.3s ease-in;
+}
+.nav-title:hover,
+.footer-title:hover,
+.link-box:hover {
+  background: var(--bg-color);
+  color: transparent;
+  background-clip: text;
 }
 .linear {
   background: var(--bg-color);
@@ -76,6 +88,12 @@ nav {
 .nav-link {
   text-decoration: none;
   color: #ffffff;
+  transition: all 0.3s linear;
+}
+.nav-link:hover {
+  background: var(--bg-color);
+  color: transparent;
+  background-clip: text;
 }
 /* banner section */
 .banner-section {
@@ -152,8 +170,10 @@ nav {
   margin-bottom: 16px;
 }
 /* Why choose TechWave */
-.choose-techwave {
+.choose-techWave {
   background-color: #230e3d;
+  padding: 120px 200px;
+  margin-top: 120px;
 }
 .techWave-title {
   margin-bottom: 2.5rem;
@@ -254,7 +274,7 @@ nav {
 }
 /* footer related styles */
 footer {
-  background-image: url('../assets/footer-bg.png');
+  background-image: url("../assets/footer-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -266,6 +286,7 @@ footer {
   font-size: 4rem;
   font-weight: 900;
   margin-bottom: 2rem;
+  transition: 0.3s;
 }
 .social-link {
   display: flex;
@@ -280,9 +301,13 @@ footer {
 }
 .link-box img {
   display: inline-block;
+  transition: 0.4s ease-in;
 }
 /* responsive for small device */
 @media screen and (max-width: 576px) {
+  .container {
+    margin: 0 auto;
+  }
   nav {
     padding: 20px;
   }
@@ -310,8 +335,11 @@ footer {
   .our-impact-box {
     flex-wrap: wrap;
   }
+  .choose-techWave {
+    padding: 20px 0px;
+    margin: 0;
+  }
   .techWave-box {
-    grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
       "p p p"
       "m m m"
@@ -325,6 +353,79 @@ footer {
   .Episodes-box,
   .Author-Bio {
     flex-direction: column;
+  }
+  .Episodes-title,
+  .host-title {
+    margin: 15px 0;
+  }
+  .Author-Bio {
+    text-align: center;
+  }
+  .author-social {
+    justify-content: center;
+  }
+  .social-link {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .container {
+    margin: 0 auto;
+  }
+  nav {
+    padding: 20px;
+  }
+  .nav-menu {
+    display: block;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .nav-menu {
+    display: flex;
+    width: 40%;
+  }
+  .banner-section {
+    background-size: 200px, contain;
+    padding: 2.38rem 0;
+    background-position:
+      center top 5px,
+      top center;
+  }
+  .banner-image {
+    width: 80px;
+  }
+  #tooltip {
+    bottom: 91.7%;
+    left: 53%;
+  }
+  .our-impact-box {
+    flex-wrap: wrap;
+  }
+  .choose-techWave {
+    padding: 20px 0px;
+    margin: 0;
+  }
+  .techWave-box {
+    grid-template-areas:
+      "p   m"
+      "l   s"
+      "r  r r";
+    padding: 20px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .Episodes-box,
+  .Author-Bio {
+    flex-direction: column;
+  }
+  .Episodes-title,
+  .host-title {
+    margin: 15px 0;
+  }
+  .video {
+    height: 553px;
   }
   .Author-Bio {
     text-align: center;
