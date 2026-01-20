@@ -18,6 +18,7 @@ body {
   --primary-color: #ffffff;
   --text-gray: #627382;
   --light-green: #00ff88;
+  --purple: rgba(53, 17, 101, 0.4);
 }
 ::selection {
   background-color: rgba(251, 9, 180, 1);
@@ -37,7 +38,7 @@ body {
 }
 .container {
   max-width: 1200px;
-  margin: 7.5rem auto 0;
+  margin: 0 auto;
   text-align: center;
 }
 .btn {
@@ -171,7 +172,7 @@ nav {
 }
 /* Why choose TechWave */
 .choose-techWave {
-  background-color: #230e3d;
+  background-color: var(--purple);
   padding: 120px 200px;
   margin-top: 120px;
 }
@@ -189,7 +190,7 @@ nav {
 }
 .techWave-card {
   text-align: left;
-  background-color: rgba(53, 17, 101, 0.4);
+  background-color: var(--purple);
   border-radius: 40px;
   padding: 40px;
 }
@@ -220,7 +221,9 @@ nav {
   gap: 30px;
   text-align: left;
 }
-.Episodes-title {
+.Episodes-title,
+.host-title {
+  margin-top: 120px;
   margin-bottom: 40px;
 }
 .video {
@@ -236,7 +239,7 @@ nav {
 }
 .video-content {
   border-radius: 0 0 24px 24px;
-  background-color: rgba(53, 17, 101, 0.4);
+  background-color: var(--purple);
   padding: 24px;
 }
 .video-title {
@@ -248,12 +251,9 @@ nav {
   height: 214px;
 }
 /* Meet the Host related styles */
-.host-title {
-  margin-bottom: 40px;
-}
 .Author-Bio {
   text-align: left;
-  background-color: rgba(53, 17, 101, 0.4);
+  background-color: var(--purple);
   display: flex;
   align-items: center;
   gap: 24px;
@@ -271,6 +271,11 @@ nav {
   justify-content: left;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.author-social img:hover{
+  transform: scale(1.5);
 }
 /* footer related styles */
 footer {
@@ -298,6 +303,7 @@ footer {
 .link-box {
   display: flex;
   gap: 8px;
+  cursor: pointer;
 }
 .link-box img {
   display: inline-block;
