@@ -24,7 +24,31 @@ body {
   background-color: rgba(251, 9, 180, 1);
   color: rgba(247, 233, 63, 1);
 }
-
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes change-color {
+  0% {
+    color: var(--light-green);
+  }
+  25% {
+    color: var(--purple);
+  }
+  50% {
+    color: rgba(251, 9, 180, 1);
+  }
+  100% {
+    color: var(--light-green);
+  }
+}
 /* shared style  */
 .description {
   font-size: 1rem;
@@ -49,6 +73,19 @@ body {
   font-size: 1rem;
   font-weight: 600;
   border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.btn:hover {
+  background: var(--bg-color);
+  color: transparent;
+  background-clip: text;
+  border: 1px solid rgba(251, 9, 180, 1);
+}
+.title-hover:hover {
+  background: var(--bg-color);
+  color: transparent;
+  background-clip: text;
 }
 
 /* nav related styles  */
@@ -66,13 +103,6 @@ nav {
   font-weight: 600;
   transition: 0.3s ease-in;
 }
-.nav-title:hover,
-.footer-title:hover,
-.link-box:hover {
-  background: var(--bg-color);
-  color: transparent;
-  background-clip: text;
-}
 .linear {
   background: var(--bg-color);
   color: transparent;
@@ -86,15 +116,16 @@ nav {
   gap: 2rem;
   list-style: none;
 }
+.nav-menu li {
+  transition: transform 0.3s linear;
+}
+.nav-menu li:hover {
+  transform: scale(1.5);
+}
 .nav-link {
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s linear;
-}
-.nav-link:hover {
-  background: var(--bg-color);
-  color: transparent;
-  background-clip: text;
 }
 /* banner section */
 .banner-section {
@@ -109,11 +140,16 @@ nav {
   padding: 6.31rem 0;
   position: relative;
 }
+.banner-image {
+  width: 116px;
+  animation: zoom-in-out 4s linear  infinite both ;
+}
 .banner-title {
   font-size: 3.75rem;
   font-weight: 800;
   color: var(--primary-color);
   margin-top: 6.25rem;
+  transition: 0.3s linear;
 }
 #tooltip {
   position: absolute;
@@ -169,6 +205,7 @@ nav {
 .impact-title {
   color: var(--light-green);
   margin-bottom: 16px;
+  animation: change-color  4s linear  infinite both;
 }
 /* Why choose TechWave */
 .choose-techWave {
@@ -375,9 +412,6 @@ footer {
   }
 }
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .container {
-    margin: 0 auto;
-  }
   nav {
     padding: 20px;
   }
@@ -389,6 +423,7 @@ footer {
   }
   .nav-menu {
     display: flex;
+    justify-content: right;
     width: 40%;
   }
   .banner-section {
@@ -419,18 +454,12 @@ footer {
       "r  r r";
     padding: 20px;
   }
-  .section-title {
-    font-size: 2rem;
-  }
   .Episodes-box,
   .Author-Bio {
     flex-direction: column;
   }
-  .Episodes-title,
-  .host-title {
-    margin: 15px 0;
-  }
   .video {
+    width: 100%;
     height: 553px;
   }
   .Author-Bio {
@@ -438,8 +467,5 @@ footer {
   }
   .author-social {
     justify-content: center;
-  }
-  .social-link {
-    flex-wrap: wrap;
   }
 }
